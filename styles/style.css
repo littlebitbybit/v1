@@ -1,0 +1,114 @@
+/* designed/built by Alvin Wan 08/06/17 */
+* {
+    float:left;
+    position:relative;
+    font-family:'Quicksand';
+    margin:0;
+    padding:0;
+}
+body, html, main,section {
+    width:100%;
+}
+
+.landing {
+    z-index:1;
+}
+.landing-boy {
+    z-index:5;
+}
+.landing-bg {
+    z-index:5;
+}
+.landing-bg,.landing-bg-gradient,.landing .bg {
+    width:100%;
+}
+.landing-boy {
+    position:absolute;
+    left:27%;
+    margin-top:6em;
+    z-index:11;
+}
+.landing-bg-gradient {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    display:block;
+    min-height:100%;
+    opacity:0.8;
+}
+.landing-bg .bg {
+    z-index:5;
+    margin-top:-9.5em;
+}
+aside,.landing-bg-gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7931e+0,d9e021+100 */
+    background: #f7931e; /* Old browsers */
+    background: -moz-linear-gradient(top, #f7931e 0%, #d9e021 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f7931e 0%,#d9e021 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f7931e 0%,#d9e021 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7931e', endColorstr='#d9e021',GradientType=0 ); /* IE6-9 */
+}
+.landing-text {
+    text-align:right;
+    z-index:6;
+    position:absolute;
+    left:50%;
+    top:0;
+    padding:10% 10% 0 15%;
+}
+
+.landing-text h1 {
+    font-family:'Rock Salt';
+    font-size:3.5em;
+    color:#FFF;
+    line-height:150%;
+}
+.landing-text .copy {
+    color:#FFF;
+    line-height:200%;
+    margin-top:2em;
+}
+.landing-text .button {
+    margin-top:1em;
+}
+aside.news {
+    position:absolute;
+    top:0;
+    left:0;
+    width:30%;
+    z-index:10;
+    box-shadow:0 0 5em rgba(0,0,0,0.5);
+    box-sizing:border-box;
+    padding:5%;
+    color:#FFF;
+    min-height:100%;
+}
+.news .logo {
+    width:5em;
+}
+.news h1 {
+    font-family:'Rock Salt';
+    font-size:3.5em;
+    line-height:150%;
+}
+.news .copy {
+    margin-top:1em;
+    line-height:200%;
+}
+.news .button {
+    margin-top:1em;
+}
+.button {
+    color:#a08632;
+    background-color:#FFF;
+    padding:1em 2em;
+    border-radius:3em;
+    display:inline-block;
+    float:none;
+}
+.button.outline {
+    background-color:transparent;
+    border:2px solid #FFF;
+    color:#FFF;
+}
