@@ -36,7 +36,7 @@ footer {
  * Landing *
  ***********/
 
-.section-bg,.section-bg-gradient,.landing .bg {
+.section-bg,.section-bg-gradient,.section .bg {
     width:100%;
 }
 .landing-boy {
@@ -54,9 +54,16 @@ footer {
     min-height:100%;
     opacity:0.8;
 }
+.landing .bg {
+    margin-top:-9.5em;
+}
 .section-bg .bg {
     z-index:5;
-    margin-top:-9.5em;
+    position:absolute;
+    top:0;
+    bottom:0;
+    display:block;
+    width:100%;
 }
 aside,.section-bg-gradient {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7931e+0,d9e021+100 */
