@@ -6,7 +6,7 @@
     margin:0;
     padding:0;
 }
-body, html, main,section {
+body, html, main,section,footer {
     width:100%;
 }
 
@@ -18,6 +18,9 @@ body, html, main,section {
 }
 .map {
     z-index:3;
+}
+footer {
+    z-index:4;
 }
 .landing-boy {
     z-index:5;
@@ -306,7 +309,7 @@ aside li:last-child::before {
     background-color:#FFF;
 }
 .section-people {
-    padding:3em 10%;
+    padding:1em 10% 3em 10%;
 }
 .section-bg {
     overflow:hidden;
@@ -323,6 +326,7 @@ aside li:last-child::before {
     margin-top:-9em;
     padding-top:10em;
     padding-right:30%;
+    padding-bottom:5em;
 }
 
 .about .section-bg {
@@ -355,4 +359,37 @@ aside li:last-child::before {
     color:#FFF;
     text-align:center;
     width:100%;
+}
+
+/**********
+ * Footer *
+ **********/
+
+footer {
+    text-align:center;
+    background-color:#222;
+    padding-bottom:5em;
+}
+footer img {
+    float:none;
+    display:inline-block;
+    width:15em;
+}
+footer p {
+    width:100%;
+    text-align:center;
+    color:#999;
+    margin-top:-2em;
+}
+footer::before {
+    content:"";
+    width:0;
+    height:0;
+    border-top:2em solid transparent;
+    border-bottom:2em solid #222;
+    border-left:100vh solid #222;
+    border-right:100vh solid transparent;
+    position:absolute;
+    bottom:100%;
+    left:0;
 }
