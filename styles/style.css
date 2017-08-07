@@ -13,12 +13,20 @@ body, html, main,section {
 .landing {
     z-index:1;
 }
+.map {
+    z-index:2;
+}
 .landing-boy {
     z-index:5;
 }
 .landing-bg {
     z-index:5;
 }
+
+/***********
+ * Landing *
+ ***********/
+
 .landing-bg,.landing-bg-gradient,.landing .bg {
     width:100%;
 }
@@ -111,4 +119,119 @@ aside.news {
     background-color:transparent;
     border:2px solid #FFF;
     color:#FFF;
+}
+
+/*******
+ * Map *
+ *******/
+
+.map {
+    margin-top:-10em;
+}
+.map-bg {
+    z-index:3;
+}
+.map-elements {
+    z-index:5;
+}
+.map-bg,.map-bg img,.map-elements {
+    width:100%;
+}
+.map-title {
+    position:absolute;
+    top:12em;
+    left:10%;
+    color:#FFF;
+    background-color:rgba(0,0,0,0.5);
+    padding:0.5em 0.75em;
+    z-index:10;
+    white-space: nowrap;
+}
+.map-title span {
+    position:absolute;
+    color:#d9e021;
+    background-color:rgba(0,0,0,0.75);
+    padding:0.5em 0.75em;
+    top:100%;
+    left:0;
+}
+.marker {
+    position:absolute;
+    top:20em;
+    left:20%;
+}
+.marker-location {
+    background-color:#000;
+    color:#FFF;
+    padding:0.5em 1em 0.5em 0.75em;
+}
+.marker-location::before {
+    content:"";
+    position:absolute;
+    left:0.5em;
+    top:100%;
+    width:0;
+    height:0;
+    border-top:0.5em solid #000;
+    border-left:0.5em solid transparent;
+    border-right:0.5em solid transparent;
+}
+.marker-location span {
+    background-color:#d9e021;
+    position:absolute;
+    left:100%;
+    top:0;
+    padding:0.5em 0.75em 0.5em 0.5em;
+    margin-left:-0.25em;
+    color:#000;
+}
+.marker-location span::before {
+    content:"";
+    position:absolute;
+    right:100%;
+    top:0;
+    width:0;
+    height:0;
+    border-right:0.2em solid #d9e021;
+    border-bottom:1.2em solid #d9e021;
+    border-top:1.2em solid transparent;
+    border-left:0.2em solid transparent;
+}
+.circles {
+    position:absolute;
+    top:100%;
+    left:0;
+}
+.circle {
+    display:inline-block;
+    border-radius:50%;
+    background-color:#d9e021;
+    box-shadow:0 0 3px 0 rgba(0,0,0,1);
+    float:none;
+}
+.circle.middle,.circle.low {
+    text-align:center;
+    opacity:0.25;
+}
+.circle.low {
+    width:2em;
+    height:2em;
+    z-index:1;
+}
+.circle.middle {
+    width:1.2em;
+    height:1.2em;
+    z-index:2;
+    position:absolute;
+    top:0.4em;
+    left:0.4em;
+}
+.circle.high {
+    width:0.4em;
+    height:0.4em;
+    box-shadow:0 0 3px 0 rgba(0,0,0,0.3);
+    z-index:3;
+    position:absolute;
+    top:0.8em;
+    left:0.8em;
 }
