@@ -26,7 +26,10 @@ footer {
     z-index:5;
 }
 .section-bg {
-    z-index:5;
+    position:absolute;
+    top:0;
+    bottom:0;
+    z-index:-1;
 }
 
 /***********
@@ -38,7 +41,7 @@ footer {
 }
 .landing-boy {
     position:absolute;
-    left:27%;
+    left:15%;
     margin-top:6em;
     z-index:11;
 }
@@ -72,17 +75,18 @@ aside.upsidedown,.section-bg-gradient.upsidedown {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e021', endColorstr='#f7931e',GradientType=0 ); /* IE6-9 */
 }
 .landing-text {
+    margin-bottom:15em;
     text-align:right;
     z-index:6;
-    position:absolute;
-    left:50%;
+    width:100%;
+    box-sizing:border-box;
     top:0;
-    padding:10% 10% 0 15%;
+    padding:15% 15% 5% 15%;
 }
 
 .landing-text h1 {
     font-family:'Rock Salt';
-    font-size:3.5em;
+    font-size:2.8em;
     color:#FFF;
     line-height:150%;
 }
@@ -95,16 +99,12 @@ aside.upsidedown,.section-bg-gradient.upsidedown {
     margin-top:1em;
 }
 aside {
-    position:absolute;
-    top:0;
-    left:0;
-    width:30%;
+    width:100%;
     z-index:10;
     box-shadow:0 0 5em rgba(0,0,0,0.5);
     box-sizing:border-box;
-    padding:5%;
+    padding:15%;
     color:#FFF;
-    min-height:100%;
 }
 aside .logo {
     width:5em;
@@ -113,6 +113,7 @@ aside h1 {
     font-family:'Rock Salt';
     font-size:3.5em;
     line-height:150%;
+    width:100%;
 }
 aside .copy {
     margin-top:1em;
@@ -263,9 +264,6 @@ aside h2 {
  * About *
  *********/
 
-.about aside {
-    padding-top:7em;
-}
 aside.right {
     left:auto;
     right:0;
@@ -324,16 +322,7 @@ aside li:last-child::before {
 
 .about {
     margin-top:-9em;
-    padding-top:10em;
-    padding-right:30%;
     padding-bottom:5em;
-}
-
-.about .section-bg {
-    position:absolute;
-    top:0;
-    bottom:0;
-    z-index:-1;
 }
 
 .avatar {
@@ -345,7 +334,7 @@ aside li:last-child::before {
     display:inline-block;
 }
 .person {
-    width:33%;
+    width:50%;
     text-align:center;
     margin-top:3em;
 }
@@ -366,6 +355,7 @@ aside li:last-child::before {
  **********/
 
 footer {
+    margin-top:-3em;
     text-align:center;
     background-color:#222;
     padding-bottom:5em;
@@ -392,4 +382,70 @@ footer::before {
     position:absolute;
     bottom:100%;
     left:0;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .landing-text {
+        width:50%;
+        float:right;
+        padding:10% 10% 0 5%;
+    }
+    aside {
+        width:50%;
+        position:absolute;
+        top:0;
+        left:0;
+        padding:10%;
+        min-height:100%;
+    }
+    .section-people {
+        padding-right:60%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .about aside {
+        padding-top:7em;
+    }
+    footer {
+        margin-top:0;
+    }
+    aside {
+        width:30%;
+        position:absolute;
+        top:0;
+        left:0;
+        padding:5%;
+    }
+    .about {
+        padding-top:10em;
+        padding-right:30%;
+    }
+    .person {
+        width:33%;
+    }
+    .landing-text {
+        width:40%;
+        float:right;
+        margin-left:30%;
+        padding:10% 10% 0 5%;
+    }
+    .section-people {
+        padding-right:10%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .landing-boy {
+        left:27%;
+    }
+    .landing-text h1 {
+        font-size:3.5em;
+    }
 }
