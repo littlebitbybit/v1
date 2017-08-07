@@ -355,7 +355,6 @@ aside li:last-child::before {
  **********/
 
 footer {
-    margin-top:-3em;
     text-align:center;
     background-color:#222;
     padding-bottom:5em;
@@ -371,14 +370,20 @@ footer p {
     color:#999;
     margin-top:-2em;
 }
+.footer-container {
+    width:100%;
+    overflow:hidden;
+    margin-top:-7em;
+    padding-top:4em;
+}
 footer::before {
     content:"";
     width:0;
     height:0;
     border-top:2em solid transparent;
     border-bottom:2em solid #222;
-    border-left:100vh solid #222;
-    border-right:100vh solid transparent;
+    border-left:100vw solid #222;
+    border-right:100vw solid transparent;
     position:absolute;
     bottom:100%;
     left:0;
@@ -405,6 +410,10 @@ footer::before {
     .section-people {
         padding-right:60%;
     }
+    .footer-container {
+        margin-top:-4em;
+        padding-top:4em;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -416,11 +425,11 @@ footer::before {
         margin-top:0;
     }
     aside {
-        width:30%;
+        width:40%;
         position:absolute;
         top:0;
         left:0;
-        padding:5%;
+        padding:7.5%;
     }
     .about {
         padding-top:10em;
@@ -436,7 +445,7 @@ footer::before {
         padding:10% 10% 0 5%;
     }
     .section-people {
-        padding-right:10%;
+        padding-right:20%;
     }
 }
 
