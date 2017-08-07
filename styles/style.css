@@ -13,13 +13,16 @@ body, html, main,section {
 .landing {
     z-index:1;
 }
-.map {
+.about {
     z-index:2;
+}
+.map {
+    z-index:3;
 }
 .landing-boy {
     z-index:5;
 }
-.landing-bg {
+.section-bg {
     z-index:5;
 }
 
@@ -27,7 +30,7 @@ body, html, main,section {
  * Landing *
  ***********/
 
-.landing-bg,.landing-bg-gradient,.landing .bg {
+.section-bg,.section-bg-gradient,.landing .bg {
     width:100%;
 }
 .landing-boy {
@@ -36,7 +39,7 @@ body, html, main,section {
     margin-top:6em;
     z-index:11;
 }
-.landing-bg-gradient {
+.section-bg-gradient {
     position:absolute;
     top:0;
     left:0;
@@ -45,17 +48,25 @@ body, html, main,section {
     min-height:100%;
     opacity:0.8;
 }
-.landing-bg .bg {
+.section-bg .bg {
     z-index:5;
     margin-top:-9.5em;
 }
-aside,.landing-bg-gradient {
+aside,.section-bg-gradient {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7931e+0,d9e021+100 */
     background: #f7931e; /* Old browsers */
     background: -moz-linear-gradient(top, #f7931e 0%, #d9e021 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #f7931e 0%,#d9e021 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #f7931e 0%,#d9e021 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7931e', endColorstr='#d9e021',GradientType=0 ); /* IE6-9 */
+}
+aside.upsidedown,.section-bg-gradient.upsidedown {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d9e021+0,d9e021+0,f7931e+100,f7931e+100 */
+    background: #d9e021; /* Old browsers */
+    background: -moz-linear-gradient(top, #d9e021 0%, #d9e021 0%, #f7931e 100%, #f7931e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #d9e021 0%,#d9e021 0%,#f7931e 100%,#f7931e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #d9e021 0%,#d9e021 0%,#f7931e 100%,#f7931e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e021', endColorstr='#f7931e',GradientType=0 ); /* IE6-9 */
 }
 .landing-text {
     text-align:right;
@@ -80,7 +91,7 @@ aside,.landing-bg-gradient {
 .landing-text .button {
     margin-top:1em;
 }
-aside.news {
+aside {
     position:absolute;
     top:0;
     left:0;
@@ -92,20 +103,23 @@ aside.news {
     color:#FFF;
     min-height:100%;
 }
-.news .logo {
+aside .logo {
     width:5em;
 }
-.news h1 {
+aside h1 {
     font-family:'Rock Salt';
     font-size:3.5em;
     line-height:150%;
 }
-.news .copy {
+aside .copy {
     margin-top:1em;
     line-height:200%;
 }
-.news .button {
+aside .button {
     margin-top:1em;
+}
+aside h2 {
+    font-size:1.15em;
 }
 .button {
     color:#a08632;
@@ -157,8 +171,14 @@ aside.news {
 }
 .marker {
     position:absolute;
+}
+.marker1 {
     top:20em;
     left:20%;
+}
+.marker2 {
+    top:22em;
+    left:60%;
 }
 .marker-location {
     background-color:#000;
@@ -234,4 +254,105 @@ aside.news {
     position:absolute;
     top:0.8em;
     left:0.8em;
+}
+
+/*********
+ * About *
+ *********/
+
+.about aside {
+    padding-top:7em;
+}
+aside.right {
+    left:auto;
+    right:0;
+}
+aside li h2::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:-3.1em;
+    width:1em;
+    height:1em;
+    border-radius:50%;
+    background-color:#FFF;
+}
+aside li:first-child {
+    margin-top:2em;
+}
+aside li:first-child h2 {
+    margin-top:0;
+}
+aside li:not(:last-child) {
+    border-left:0.15em solid #FFF;
+}
+aside li p {
+    font-style:italic;
+    opacity:0.7;
+}
+aside li {
+    padding-left:3em;
+    list-style:none;
+    border-left:0.15em solid transparent;
+}
+aside li:last-child::before {
+    content:"";
+    content:"";
+    position:absolute;
+    top:0;
+    left:-0.15em;
+    width:0.15em;
+    height:2em;
+    background-color:#FFF;
+}
+.section-people {
+    padding:3em 10%;
+}
+.section-bg {
+    overflow:hidden;
+}
+.section-bg img {
+    width:100%;
+}
+
+.avatar img {
+    width:100%;
+}
+
+.about {
+    margin-top:-9em;
+    padding-top:10em;
+    padding-right:30%;
+}
+
+.about .section-bg {
+    position:absolute;
+    top:0;
+    bottom:0;
+    z-index:-1;
+}
+
+.avatar {
+    width:8em;
+    height:8em;
+    border-radius:50%;
+    overflow:hidden;
+    float:none;
+    display:inline-block;
+}
+.person {
+    width:33%;
+    text-align:center;
+    margin-top:3em;
+}
+.person h2 {
+    color:#FFF;
+    font-size:1.25em;
+    text-align:center;
+    width:100%;
+}
+.person p {
+    color:#FFF;
+    text-align:center;
+    width:100%;
 }
