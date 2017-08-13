@@ -19,7 +19,7 @@ body, html, main,section,footer {
 .map {
     z-index:3;
 }
-footer {
+.method, footer {
     z-index:4;
 }
 .landing-boy {
@@ -139,11 +139,26 @@ aside h2 {
     border-radius:3em;
     display:inline-block;
     float:none;
+    border:2px solid transparent;
+    transition:     0.2s ease;
+}
+.button:hover {
+    color:#FFF;
+    border: 2px solid #FFF;
+    background-color:transparent;
+    text-decoration:none;
 }
 .button.outline {
     background-color:transparent;
     border:2px solid #FFF;
     color:#FFF;
+}
+.button.outline:hover {
+    color:#a08632;
+    background-color:#FFF;
+}
+.button + .button {
+    margin-left:1em;
 }
 
 /*******
@@ -358,6 +373,65 @@ aside li:last-child::before {
 }
 
 /**********
+ * Method *
+ **********/
+
+.method-container {
+    width:100%;
+    overflow:hidden;
+    margin-top:-10em;
+    padding-top:10em;
+}
+.method {
+    background-color:#222;
+    width:100%;
+    color:#ccc;
+}
+.method::before {
+    content:"";
+    width:0;
+    height:0;
+    border-top:5em solid transparent;
+    border-bottom:5em solid #222;
+    border-left:100vw solid #222;
+    border-right:100vw solid transparent;
+    position:absolute;
+    bottom:100%;
+    left:0;
+}
+.method .wrap .col {
+    padding:0 10% 10% 10%;
+}
+
+.method h1 {
+    font-family:'Rock Salt';
+    font-size:3.5em;
+    color:#FFF;
+    margin-bottom:1em;
+}
+
+.method h1 + p.big {
+    margin-bottom:1em;
+}
+
+.method p.big {
+    font-size:1.5em;
+}
+.method li {
+    margin-top:0.5em;
+    font-size:1.1em;
+    margin-left:1em;
+}
+.method .mission {
+    font-size:1.1em;
+    line-height:150%;
+}
+.method p {
+    margin-top:1.5em;
+}
+
+
+/**********
  * Footer *
  **********/
 
@@ -376,24 +450,6 @@ footer p {
     text-align:center;
     color:#999;
     margin-top:-2em;
-}
-.footer-container {
-    width:100%;
-    overflow:hidden;
-    margin-top:-7em;
-    padding-top:4em;
-}
-footer::before {
-    content:"";
-    width:0;
-    height:0;
-    border-top:2em solid transparent;
-    border-bottom:2em solid #222;
-    border-left:100vw solid #222;
-    border-right:100vw solid transparent;
-    position:absolute;
-    bottom:100%;
-    left:0;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -420,6 +476,12 @@ footer::before {
     .footer-container {
         margin-top:-4em;
         padding-top:4em;
+    }
+    .method .wrap .col {
+        padding:3em;
+    }
+    section.method-container {
+        margin-top:-6em;
     }
 }
 
@@ -453,6 +515,9 @@ footer::before {
     }
     .section-people {
         padding-right:20%;
+    }
+    section.method-container {
+        margin-top:-4em;
     }
 }
 
