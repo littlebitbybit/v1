@@ -31,6 +31,9 @@ body, html, main,section,footer {
     bottom:0;
     z-index:-1;
 }
+p a {
+    float:none;
+}
 
 /***********
  * Landing *
@@ -429,6 +432,15 @@ aside li:last-child::before {
 .method p {
     margin-top:1.5em;
 }
+.sponsors {
+    background-color:#222;
+    padding-bottom:2em;
+}
+.sponsors-title {
+    text-align:center;
+    color:#FFF;
+    margin-bottom:2em;
+}
 
 
 /**********
@@ -450,6 +462,16 @@ footer p {
     text-align:center;
     color:#999;
     margin-top:-2em;
+    display:block;
+}
+footer a {
+    color:#666;
+    border-bottom:1px dashed #666;
+}
+footer a:hover {
+    color:#999;
+    border-bottom:1px solid #999;
+    text-decoration:none;
 }
 
 /* Extra small devices (phones, less than 768px) */
